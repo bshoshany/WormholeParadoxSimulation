@@ -1,0 +1,1351 @@
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Wormhole Time Machines and Multiple Histories", "Title",
+ TextAlignment->Center,ExpressionUUID->"a4788cf1-87df-4bd4-8a44-6c4f0f5d5deb"],
+
+Cell[CellGroupData[{
+
+Cell["Barak Shoshany", "Chapter",
+ TextAlignment->Center,
+ FontSize->24,ExpressionUUID->"1620339a-f419-4d46-b64f-7ee6cd92674a"],
+
+Cell[TextData[ButtonBox["bshoshany@brocku.ca",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["mailto:bshoshany@brocku.ca"], None},
+ ButtonNote->"mailto:bshoshany@brocku.ca"]], "Text",
+ TextAlignment->Center,ExpressionUUID->"fc84967c-73f9-4c07-9fb9-219d9bf32db4"],
+
+Cell["https://baraksh.com/", "Text",
+ TextAlignment->Center,ExpressionUUID->"95b294a6-409d-47c3-8538-4733dd316213"],
+
+Cell["https://orcid.org/0000-0003-2222-127X", "Text",
+ TextAlignment->Center,ExpressionUUID->"4839b35f-33c0-48ed-ba86-599c87356e87"],
+
+Cell["https://github.com/bshoshany", "Text",
+ TextAlignment->Center,ExpressionUUID->"6fff098c-ebf4-4de1-b348-8c0cd6e29f32"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Jared Wogan", "Chapter",
+ TextAlignment->Center,
+ FontSize->24,ExpressionUUID->"2ca096c1-a860-4af7-b578-d43846b82a40"],
+
+Cell[TextData[ButtonBox["jw17yv@brocku.ca",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["mailto:jw17yv@brocku.ca"], None},
+ ButtonNote->"mailto:jw17yv@brocku.ca"]], "Text",
+ TextAlignment->Center,ExpressionUUID->"53f59712-afd1-4fa9-87e8-6981a33fbc5b"],
+
+Cell["https://jaredwogan.ca", "Text",
+ TextAlignment->Center,ExpressionUUID->"9ffd9ecd-e9b3-4211-a0ef-62b6d4bdc1f3"],
+
+Cell["https://orcid.org/0000-0002-0737-5492", "Text",
+ TextAlignment->Center,ExpressionUUID->"e9724c29-dc92-40c7-85de-fd3c990f1e82"],
+
+Cell["https://github.com/JaredWogan", "Text",
+ TextAlignment->Center,ExpressionUUID->"08c0c19b-f267-42c4-88a0-d3a5c30b16af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Department of Physics, Brock University, 1812 Sir \
+Isaac Brock Way, St. Catharines, Ontario, L2S 3A1, Canada",
+ FontSize->18]], "Chapter",
+ TextAlignment->Center,ExpressionUUID->"7eac218f-32f8-4f80-803a-5f68f3a48d0d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"padNumber", ",", "padDegrees", ",", 
+     RowBox[{"tmax", "=", "2.5"}], ",", 
+     RowBox[{"tmin", "=", 
+      RowBox[{"-", "1.5"}]}], ",", 
+     RowBox[{"xmax", "=", "2"}], ",", 
+     RowBox[{"xmin", "=", 
+      RowBox[{"-", "2"}]}], ",", 
+     RowBox[{"ymax", "=", "0.25"}], ",", 
+     RowBox[{"ymin", "=", 
+      RowBox[{"-", "0.25"}]}], ",", 
+     RowBox[{"initialTemperature", "=", "750"}], ",", "collisionTemperature", 
+     ",", "minimumTemperature", ",", 
+     RowBox[{"b", "=", "0.45"}], ",", 
+     RowBox[{"l", "=", "1.2"}], ",", 
+     RowBox[{"v", "=", "0.6"}], ",", 
+     RowBox[{"a", "=", 
+      RowBox[{"-", "0.5"}]}], ",", "\[Phi]", ",", 
+     RowBox[{"tl", "=", "0.5"}], ",", 
+     RowBox[{"t0", "=", "1"}], ",", 
+     RowBox[{"history", "=", "1"}], ",", "particleTemperature", ",", 
+     "colourFunction1", ",", "colourFunction2", ",", "colourFunction3", ",", 
+     RowBox[{"persistentWormhole", "=", "True"}], ",", 
+     RowBox[{"multipleHistories", "=", "False"}], ",", "bump1", ",", "bump2", 
+     ",", "wormhole", ",", "radial1", ",", "radial2", ",", "geodesicPlot", 
+     ",", "singleHistory", ",", "multipleHistory", ",", "graphics"}], "}"}], 
+   ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"padNumber", "[", "n_", "]"}], ":=", 
+     RowBox[{"PaddedForm", "[", 
+      RowBox[{
+       RowBox[{"N", "[", "n", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "2"}], "}"}], ",", 
+       RowBox[{"NumberPadding", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<\>\"", ",", "\"\<0\>\""}], "}"}]}], ",", 
+       RowBox[{"NumberSigns", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<-\>\"", ",", "\"\<+\>\""}], "}"}]}]}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"padDegrees", "[", "n_", "]"}], ":=", 
+     RowBox[{"PaddedForm", "[", 
+      RowBox[{
+       RowBox[{"IntegerPart", "[", 
+        RowBox[{"N", "[", "n", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "0"}], "}"}], ",", 
+       RowBox[{"NumberPadding", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\< \>\"", ",", "\"\<0\>\""}], "}"}]}], ",", 
+       RowBox[{"NumberSigns", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<-\>\"", ",", "\"\<+\>\""}], "}"}]}]}], "]"}]}], ";", 
+    RowBox[{"\[Phi]", "=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"a", " ", "\[Pi]"}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"particleTemperature", "[", 
+      RowBox[{"initialT_", ",", "t_"}], "]"}], ":=", 
+     RowBox[{"N", "[", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["t", 
+          RowBox[{"3", " ", 
+           SuperscriptBox["10", "8"]}]], "+", 
+         FractionBox["1", 
+          SuperscriptBox["initialT", "0.5"]]}], ")"}], 
+       RowBox[{"-", 
+        FractionBox["1", "0.5"]}]], "]"}]}], ";", 
+    RowBox[{"collisionTemperature", "=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"Mean", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"particleTemperature", "[", 
+          RowBox[{"initialTemperature", ",", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"l", "-", "v"}], "v"], "-", "tmin"}]}], "]"}], ",", 
+         RowBox[{"particleTemperature", "[", 
+          RowBox[{"initialTemperature", ",", 
+           RowBox[{
+            FractionBox["l", "v"], "+", 
+            FractionBox[
+             RowBox[{"l", "-", "v"}], "v"], "-", "tmin"}]}], "]"}]}], "}"}], 
+       "]"}], "]"}]}], ";", 
+    RowBox[{"minimumTemperature", "=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"particleTemperature", "[", 
+       RowBox[{
+        RowBox[{
+        "collisionTemperature", "\[LeftDoubleBracket]", "1", 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{"tmax", "-", 
+         FractionBox[
+          RowBox[{"l", "-", "v"}], "v"], "-", "tmin"}]}], "]"}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"colourFunction1", "[", "t_", "]"}], ":=", 
+     RowBox[{"Blend", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Blue", ",", "Yellow", ",", "Orange", ",", "Red"}], "}"}], 
+       ",", 
+       RowBox[{"Rescale", "[", 
+        RowBox[{
+         RowBox[{"particleTemperature", "[", 
+          RowBox[{"initialTemperature", ",", 
+           RowBox[{"t", "-", "tmin"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "minimumTemperature", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}], ",", "initialTemperature"}], "}"}]}], 
+        "]"}]}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"colourFunction2", "[", "t_", "]"}], ":=", 
+     RowBox[{"Blend", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Blue", ",", "Yellow", ",", "Orange", ",", "Red"}], "}"}], 
+       ",", 
+       RowBox[{"Rescale", "[", 
+        RowBox[{
+         RowBox[{"particleTemperature", "[", 
+          RowBox[{
+           RowBox[{
+           "collisionTemperature", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"t", "-", 
+            FractionBox[
+             RowBox[{"l", "-", "v"}], "v"], "-", "tmin"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "minimumTemperature", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}], ",", "initialTemperature"}], "}"}]}], 
+        "]"}]}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"colourFunction3", "[", "t_", "]"}], ":=", 
+     RowBox[{"Blend", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Blue", ",", "Yellow", ",", "Orange", ",", "Red"}], "}"}], 
+       ",", 
+       RowBox[{"Rescale", "[", 
+        RowBox[{
+         RowBox[{"particleTemperature", "[", 
+          RowBox[{"initialTemperature", ",", 
+           RowBox[{"t", "-", "tmin", "+", 
+            FractionBox["l", "v"]}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "minimumTemperature", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}], ",", "initialTemperature"}], "}"}]}], 
+        "]"}]}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"bump1", "[", "t_", "]"}], ":=", 
+     RowBox[{"Piecewise", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.0001", ",", 
+          RowBox[{
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             SuperscriptBox["tl", "2"], "-", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"t", "-", "t0"}], ")"}], "2"]}], "]"}], "<", 
+           "0.01"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"b", " ", 
+           RowBox[{"Exp", "[", 
+            RowBox[{
+             FractionBox["1", 
+              SuperscriptBox["tl", "2"]], "-", 
+             FractionBox["1", 
+              RowBox[{
+               SuperscriptBox["tl", "2"], "-", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{"t", "-", "t0"}], ")"}], "2"]}]]}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"t0", "-", "tl"}], "<", "t"}], "&&", 
+           RowBox[{"t", "<", 
+            RowBox[{"t0", "+", "tl"}]}]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.0001", ",", "True"}], "}"}]}], "}"}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"bump2", "[", "t_", "]"}], ":=", 
+     RowBox[{"bump1", "[", 
+      RowBox[{"t", "+", "2"}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"radial1", "[", "t_", "]"}], ":=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{"persistentWormhole", ",", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["b", "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"l", "-", 
+             RowBox[{"v", " ", "t"}]}], ")"}], "2"]}]], ",", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"bump1", "[", "t", "]"}], "+", 
+             RowBox[{"bump2", "[", "t", "]"}]}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"l", "-", 
+             RowBox[{"v", " ", "t"}]}], ")"}], "2"]}]]}], "]"}], "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"radial2", "[", "t_", "]"}], ":=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{"persistentWormhole", ",", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["b", "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"v", " ", 
+             RowBox[{"(", 
+              RowBox[{"t", "+", "2", "-", 
+               FractionBox["l", "v"]}], ")"}]}], ")"}], "2"]}]], ",", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"bump1", "[", "t", "]"}], "+", 
+             RowBox[{"bump2", "[", "t", "]"}]}], ")"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"v", " ", 
+             RowBox[{"(", 
+              RowBox[{"t", "+", "2", "-", 
+               FractionBox["l", "v"]}], ")"}]}], ")"}], "2"]}]]}], "]"}], 
+      "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"geodesicPlot", "[", 
+      RowBox[{
+      "geodesic_", ",", "phiOffset_", ",", "t1_", ",", "t2_", ",", 
+       "colours_"}], "]"}], ":=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"t1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+          ">", "tmax"}], ",", 
+        RowBox[{"{", "}"}], ",", 
+        RowBox[{"ParametricPlot3D", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"geodesic", "[", "t", "]"}], "\[LeftDoubleBracket]", 
+              "1", "\[RightDoubleBracket]"}], " ", 
+             RowBox[{"Cos", "[", "phiOffset", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"geodesic", "[", "t", "]"}], "\[LeftDoubleBracket]", 
+              "1", "\[RightDoubleBracket]"}], " ", 
+             RowBox[{"Sin", "[", "phiOffset", "]"}]}], ",", "t"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", 
+            RowBox[{
+            "t1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+            RowBox[{
+            "t2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+           "}"}], ",", 
+          RowBox[{"ColorFunction", "\[Rule]", "colours"}], ",", 
+          RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}]}], "]"}]}], 
+       "]"}], "]"}]}], ";", 
+    RowBox[{"wormhole", "=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{"persistentWormhole", ",", 
+        RowBox[{"Graphics3D", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Opacity", "[", 
+            RowBox[{"0.2", ",", "Green"}], "]"}], ",", 
+           RowBox[{"Cylinder", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0", ",", 
+                 RowBox[{"tmin", "-", "1"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0", ",", 
+                 RowBox[{"tmax", "+", "1"}]}], "}"}]}], "}"}], ",", "b"}], 
+            "]"}]}], "}"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"RevolutionPlot3D", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"bump1", "[", "t", "]"}], ",", "t"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", 
+              RowBox[{"t0", "-", "tl"}], ",", 
+              RowBox[{"t0", "+", "tl"}]}], "}"}], ",", 
+            RowBox[{"Mesh", "\[Rule]", "None"}]}], "]"}], ",", 
+          RowBox[{"RevolutionPlot3D", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"bump1", "[", "t", "]"}], ",", 
+              RowBox[{"t", "-", "2"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", 
+              RowBox[{"t0", "-", "tl"}], ",", 
+              RowBox[{"t0", "+", "tl"}]}], "}"}], ",", 
+            RowBox[{"Mesh", "\[Rule]", "None"}]}], "]"}]}], "}"}]}], "]"}], 
+      "]"}]}], ";", 
+    RowBox[{"singleHistory", "=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Abs", "[", 
+             FractionBox["l", 
+              RowBox[{"t0", "+", "tl"}]], "]"}], "<", "v"}], "&&", 
+           RowBox[{
+            RowBox[{"Abs", "[", 
+             FractionBox["l", 
+              RowBox[{"t0", "-", "tl"}]], "]"}], ">", "v"}]}], ")"}], "||", 
+         "persistentWormhole"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"geodesicPlot", "[", 
+            RowBox[{"radial1", ",", "0", ",", 
+             RowBox[{"Dynamic", "[", "tmin", "]"}], ",", 
+             RowBox[{"Dynamic", "[", 
+              FractionBox[
+               RowBox[{"l", "-", "v"}], "v"], "]"}], ",", "colourFunction1"}],
+             "]"}], "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+          ",", 
+          RowBox[{
+           RowBox[{"geodesicPlot", "[", 
+            RowBox[{"radial1", ",", "0", ",", 
+             RowBox[{"Dynamic", "[", 
+              FractionBox[
+               RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+             RowBox[{"Dynamic", "[", 
+              FractionBox["l", "v"], "]"}], ",", 
+             RowBox[{"Function", "[", 
+              RowBox[{
+               RowBox[{"{", "}"}], ",", "Gray"}], "]"}]}], "]"}], 
+           "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+          RowBox[{
+           RowBox[{"geodesicPlot", "[", 
+            RowBox[{"radial2", ",", "0", ",", 
+             RowBox[{"Dynamic", "[", 
+              RowBox[{
+               FractionBox["l", "v"], "-", "2"}], "]"}], ",", 
+             RowBox[{"Dynamic", "[", 
+              FractionBox[
+               RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+             RowBox[{"Function", "[", 
+              RowBox[{
+               RowBox[{"{", "t", "}"}], ",", "Gray"}], "]"}]}], "]"}], 
+           "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+          RowBox[{
+           RowBox[{"geodesicPlot", "[", 
+            RowBox[{"radial2", ",", "0", ",", 
+             RowBox[{"Dynamic", "[", 
+              FractionBox[
+               RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+             RowBox[{"Dynamic", "[", "tmax", "]"}], ",", 
+             RowBox[{"Function", "[", 
+              RowBox[{
+               RowBox[{"{", "t", "}"}], ",", "Gray"}], "]"}]}], "]"}], 
+           "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"geodesicPlot", "[", 
+            RowBox[{"radial1", ",", "0", ",", 
+             RowBox[{"Dynamic", "[", "tmin", "]"}], ",", 
+             RowBox[{"Dynamic", "[", 
+              FractionBox["l", "v"], "]"}], ",", "colourFunction1"}], "]"}], 
+           "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             FractionBox["l", "v"], "\[LessEqual]", "tmax"}], ",", 
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "\[Pi]", ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox["l", "v"], "]"}], ",", 
+               RowBox[{"Dynamic", "[", "tmax", "]"}], ",", 
+               "colourFunction1"}], "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], ",", 
+            RowBox[{"{", "}"}]}], "]"}]}], "}"}]}], "]"}], "]"}]}], ";", 
+    RowBox[{"multipleHistory", "=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Abs", "[", 
+             FractionBox["l", 
+              RowBox[{"t0", "+", "tl"}]], "]"}], "<", "v"}], "&&", 
+           RowBox[{
+            RowBox[{"Abs", "[", 
+             FractionBox["l", 
+              RowBox[{"t0", "-", "tl"}]], "]"}], ">", "v"}]}], ")"}], "||", 
+         "persistentWormhole"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "0", ",", 
+               RowBox[{"Dynamic", "[", "tmin", "]"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox[
+                 RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+               "colourFunction1"}], "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], ",", 
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "0", ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox[
+                 RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox["l", "v"], "]"}], ",", "colourFunction1"}], "]"}],
+              "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "0", ",", 
+               RowBox[{"Dynamic", "[", "tmin", "]"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox[
+                 RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+               "colourFunction1"}], "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], ",", 
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "0", ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox[
+                 RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox["l", "v"], "]"}], ",", "colourFunction2"}], "]"}],
+              "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial2", ",", "0", ",", 
+               RowBox[{"Dynamic", "[", 
+                RowBox[{
+                 FractionBox["l", "v"], "-", "2"}], "]"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox[
+                 RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+               "colourFunction3"}], "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], ",", 
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial2", ",", "0", ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox[
+                 RowBox[{"l", "-", "v"}], "v"], "]"}], ",", 
+               RowBox[{"Dynamic", "[", "tmax", "]"}], ",", 
+               "colourFunction2"}], "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}]}], "}"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "0", ",", 
+               RowBox[{"Dynamic", "[", "tmin", "]"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox["l", "v"], "]"}], ",", "colourFunction1"}], "]"}],
+              "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "\[Pi]", ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox["l", "v"], "]"}], ",", 
+               RowBox[{"Dynamic", "[", "tmax", "]"}], ",", 
+               "colourFunction1"}], "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "0", ",", 
+               RowBox[{"Dynamic", "[", "tmin", "]"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox["l", "v"], "]"}], ",", "colourFunction1"}], "]"}],
+              "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+            RowBox[{
+             RowBox[{"geodesicPlot", "[", 
+              RowBox[{"radial1", ",", "\[Pi]", ",", 
+               RowBox[{"Dynamic", "[", 
+                FractionBox["l", "v"], "]"}], ",", 
+               RowBox[{"Dynamic", "[", "tmax", "]"}], ",", 
+               "colourFunction1"}], "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}]}], "}"}]}], "}"}]}], "]"}], "]"}]}], 
+    ";", 
+    RowBox[{
+     RowBox[{"graphics", "[", "h_", "]"}], ":=", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{"Deploy", "[", 
+       RowBox[{"Pane", "[", 
+        RowBox[{"ImageCrop", "[", 
+         RowBox[{"Show", "[", 
+          RowBox[{
+           RowBox[{
+           "wormhole", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+            ",", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"!", "multipleHistories"}], ",", 
+             RowBox[{
+             "singleHistory", "\[LeftDoubleBracket]", "1", 
+              "\[RightDoubleBracket]"}], ",", 
+             RowBox[{
+              RowBox[{
+              "multipleHistory", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "h", 
+              "\[RightDoubleBracket]"}]}], "]"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"400", ",", "400"}], "}"}]}], ",", 
+           RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+           RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+           RowBox[{"ImagePadding", "\[Rule]", "None"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"xmin", ",", "xmax"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"ymin", "-", "b"}], ",", 
+                RowBox[{"ymax", "+", "b"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"tmin", ",", "tmax"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"ViewPoint", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"1.3", " ", 
+               RowBox[{"Cos", "[", 
+                RowBox[{
+                "\[Phi]", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}], "]"}]}], ",", 
+              RowBox[{
+               RowBox[{"-", "2.4"}], " ", 
+               RowBox[{"Sin", "[", 
+                RowBox[{
+                "\[Phi]", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}], "]"}]}], ",", "1"}], "}"}]}], ",", 
+           RowBox[{"ViewVertical", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], ",", 
+           RowBox[{"ViewAngle", "\[Rule]", "Automatic"}]}], "]"}], "]"}], 
+        "]"}], "]"}], "]"}]}], ";", 
+    RowBox[{"Dynamic", "[", 
+     RowBox[{"Column", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Row", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Column", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<\>\"", ",", "\"\<Initial Position: \>\"", ",", 
+                   "\"\<Velocity: \>\"", ",", "\"\<Viewing Angle: \>\""}], 
+                  "}"}], ",", "Right", ",", 
+                 RowBox[{"Spacings", "\[Rule]", "1.2"}]}], "]"}], ",", 
+               RowBox[{"Column", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"RadioButtonBar", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "persistentWormhole", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"True", "\[Rule]", "\"\<Permanent Wormhole\>\""}],
+                     ",", 
+                    RowBox[{
+                    "False", "\[Rule]", "\"\<Temporary Wormhole\>\""}]}], 
+                    "}"}], ",", 
+                    RowBox[{"Appearance", "\[Rule]", "\"\<Vertical\>\""}]}], 
+                    "]"}], ",", 
+                   RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "l", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "0.01", "]"}], ",", "2"}], 
+                    "}"}]}], "]"}], ",", 
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"padNumber", "[", "l", "]"}], "]"}]}], "}"}], 
+                    "]"}], ",", 
+                   RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "v", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.01", ",", "1"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"padNumber", "[", "v", "]"}], "]"}]}], "}"}], 
+                    "]"}], ",", 
+                   RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "a", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"padDegrees", "[", 
+                    RowBox[{"a", " ", "180"}], "]"}], "]"}], ",", 
+                    "\"\<\[Degree]\>\""}], "}"}], "]"}]}], "}"}], ",", "Left",
+                  ",", 
+                 RowBox[{"Spacings", "\[Rule]", "1"}]}], "]"}]}], "}"}], 
+             "]"}], ",", 
+            RowBox[{"Row", "[", 
+             RowBox[{"{", "\"\<  \>\"", "}"}], "]"}], ",", 
+            RowBox[{"Row", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Column", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"\"\<\>\"", ",", "\"\<Wormhole Radius: \>\"", ",", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"!", "persistentWormhole"}], ",", 
+                    "\"\<Activation Time: \>\""}], "]"}], ",", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"!", "persistentWormhole"}], ",", 
+                    "\"\<Activation Duration: \>\""}], "]"}]}], "}"}], ",", 
+                 "Right", ",", 
+                 RowBox[{"Spacings", "\[Rule]", "1.2"}]}], "]"}], ",", 
+               RowBox[{"Column", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"RadioButtonBar", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "multipleHistories", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"False", "\[Rule]", "\"\<Single History\>\""}], 
+                    ",", 
+                    RowBox[{
+                    "True", "\[Rule]", "\"\<Multiple Histories\>\""}]}], 
+                    "}"}], ",", 
+                    RowBox[{"Appearance", "\[Rule]", "\"\<Vertical\>\""}]}], 
+                    "]"}], ",", 
+                   RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "b", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.1", ",", "1"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"padNumber", "[", "b", "]"}], "]"}]}], "}"}], 
+                    "]"}], ",", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"!", "persistentWormhole"}], ",", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "t0", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "2"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"padNumber", "[", "t0", "]"}], "]"}]}], "}"}], 
+                    "]"}]}], "]"}], ",", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"!", "persistentWormhole"}], ",", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Slider", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "tl", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.2", ",", "0.99"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"padNumber", "[", "tl", "]"}], "]"}]}], "}"}], 
+                    "]"}]}], "]"}]}], "}"}], ",", "Left", ",", 
+                 RowBox[{"Spacings", "\[Rule]", "1"}]}], "]"}]}], "}"}], 
+             "]"}]}], "}"}], "]"}], ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"graphics", "[", "1", "]"}], ",", 
+            RowBox[{"If", "[", 
+             RowBox[{"multipleHistories", ",", 
+              RowBox[{"Sequence", "@@", 
+               RowBox[{"{", 
+                RowBox[{"\"\<          \>\"", ",", 
+                 RowBox[{"graphics", "[", "2", "]"}]}], "}"}]}]}], "]"}]}], 
+           "}"}], "]"}]}], "}"}], ",", "Center"}], "]"}], "]"}]}]}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"53646834-a886-428b-b54e-5ea50c3c12ea"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`padNumber$$, $CellContext`padDegrees$$, \
+$CellContext`tmax$$ = 2.5, $CellContext`tmin$$ = -1.5, $CellContext`xmax$$ = 
+  2, $CellContext`xmin$$ = -2, $CellContext`ymax$$ = 
+  0.25, $CellContext`ymin$$ = -0.25, $CellContext`initialTemperature$$ = 
+  750, $CellContext`collisionTemperature$$ = Dynamic[
+   Mean[{
+     $CellContext`particleTemperature$$[$CellContext`initialTemperature$$, \
+($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$ - $CellContext`tmin$$], 
+     $CellContext`particleTemperature$$[$CellContext`initialTemperature$$, \
+$CellContext`l$$/$CellContext`v$$ + ($CellContext`l$$ - \
+$CellContext`v$$)/$CellContext`v$$ - $CellContext`tmin$$]}]], \
+$CellContext`minimumTemperature$$ = Dynamic[
+   $CellContext`particleTemperature$$[
+    Part[$CellContext`collisionTemperature$$, 
+     1], $CellContext`tmax$$ - ($CellContext`l$$ - \
+$CellContext`v$$)/$CellContext`v$$ - $CellContext`tmin$$]], $CellContext`b$$ =
+   0.45, $CellContext`l$$ = 1.2, $CellContext`v$$ = 
+  0.6, $CellContext`a$$ = -0.5, $CellContext`\[Phi]$$ = 
+  Dynamic[$CellContext`a$$ Pi], $CellContext`tl$$ = 0.5, $CellContext`t0$$ = 
+  1, $CellContext`history$$ = 
+  1, $CellContext`particleTemperature$$, $CellContext`colourFunction1$$, \
+$CellContext`colourFunction2$$, $CellContext`colourFunction3$$, \
+$CellContext`persistentWormhole$$ = True, $CellContext`multipleHistories$$ = 
+  False, $CellContext`bump1$$, $CellContext`bump2$$, $CellContext`wormhole$$ =
+   Dynamic[
+   If[$CellContext`persistentWormhole$$, 
+    Graphics3D[{
+      Opacity[0.2, Green], 
+      Cylinder[{{0, 0, $CellContext`tmin$$ - 1}, {
+        0, 0, $CellContext`tmax$$ + 1}}, $CellContext`b$$]}], {
+     RevolutionPlot3D[{
+       $CellContext`bump1$$[$CellContext`t], $CellContext`t}, \
+{$CellContext`t, $CellContext`t0$$ - $CellContext`tl$$, $CellContext`t0$$ + \
+$CellContext`tl$$}, Mesh -> None], 
+     RevolutionPlot3D[{
+       $CellContext`bump1$$[$CellContext`t], $CellContext`t - 
+       2}, {$CellContext`t, $CellContext`t0$$ - $CellContext`tl$$, \
+$CellContext`t0$$ + $CellContext`tl$$}, Mesh -> 
+      None]}]], $CellContext`radial1$$, $CellContext`radial2$$, \
+$CellContext`geodesicPlot$$, $CellContext`singleHistory$$ = Dynamic[
+   If[
+    Or[
+     And[Abs[$CellContext`l$$/($CellContext`t0$$ + $CellContext`tl$$)] < \
+$CellContext`v$$, 
+      Abs[$CellContext`l$$/($CellContext`t0$$ - $CellContext`tl$$)] > \
+$CellContext`v$$], $CellContext`persistentWormhole$$], {
+     Part[
+      $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+       Dynamic[$CellContext`tmin$$], 
+       Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], \
+$CellContext`colourFunction1$$], 1], 
+     Part[
+      $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+       Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], 
+       Dynamic[$CellContext`l$$/$CellContext`v$$], 
+       Function[{}, Gray]], 1], 
+     Part[
+      $CellContext`geodesicPlot$$[$CellContext`radial2$$, 0, 
+       Dynamic[$CellContext`l$$/$CellContext`v$$ - 2], 
+       Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], 
+       Function[{$CellContext`t}, Gray]], 1], 
+     Part[
+      $CellContext`geodesicPlot$$[$CellContext`radial2$$, 0, 
+       Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], 
+       Dynamic[$CellContext`tmax$$], 
+       Function[{$CellContext`t}, Gray]], 1]}, {
+     Part[
+      $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+       Dynamic[$CellContext`tmin$$], 
+       Dynamic[$CellContext`l$$/$CellContext`v$$], \
+$CellContext`colourFunction1$$], 1], 
+     If[$CellContext`l$$/$CellContext`v$$ <= $CellContext`tmax$$, 
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, Pi, 
+        Dynamic[$CellContext`l$$/$CellContext`v$$], 
+        Dynamic[$CellContext`tmax$$], $CellContext`colourFunction1$$], 
+       1], {}]}]], $CellContext`multipleHistory$$ = Dynamic[
+   If[
+    Or[
+     And[Abs[$CellContext`l$$/($CellContext`t0$$ + $CellContext`tl$$)] < \
+$CellContext`v$$, 
+      Abs[$CellContext`l$$/($CellContext`t0$$ - $CellContext`tl$$)] > \
+$CellContext`v$$], $CellContext`persistentWormhole$$], {{
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+        Dynamic[$CellContext`tmin$$], 
+        Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], \
+$CellContext`colourFunction1$$], 1], 
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+        Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], 
+        Dynamic[$CellContext`l$$/$CellContext`v$$], \
+$CellContext`colourFunction1$$], 1]}, {
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+        Dynamic[$CellContext`tmin$$], 
+        Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], \
+$CellContext`colourFunction1$$], 1], 
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+        Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], 
+        Dynamic[$CellContext`l$$/$CellContext`v$$], \
+$CellContext`colourFunction2$$], 1], 
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial2$$, 0, 
+        Dynamic[$CellContext`l$$/$CellContext`v$$ - 2], 
+        Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], \
+$CellContext`colourFunction3$$], 1], 
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial2$$, 0, 
+        Dynamic[($CellContext`l$$ - $CellContext`v$$)/$CellContext`v$$], 
+        Dynamic[$CellContext`tmax$$], $CellContext`colourFunction2$$], 1]}}, {{
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+        Dynamic[$CellContext`tmin$$], 
+        Dynamic[$CellContext`l$$/$CellContext`v$$], \
+$CellContext`colourFunction1$$], 1], 
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, Pi, 
+        Dynamic[$CellContext`l$$/$CellContext`v$$], 
+        Dynamic[$CellContext`tmax$$], $CellContext`colourFunction1$$], 1]}, {
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, 0, 
+        Dynamic[$CellContext`tmin$$], 
+        Dynamic[$CellContext`l$$/$CellContext`v$$], \
+$CellContext`colourFunction1$$], 1], 
+      Part[
+       $CellContext`geodesicPlot$$[$CellContext`radial1$$, Pi, 
+        Dynamic[$CellContext`l$$/$CellContext`v$$], 
+        Dynamic[$CellContext`tmax$$], $CellContext`colourFunction1$$], 
+       1]}}]], $CellContext`graphics$$}, 
+  DynamicBox[ToBoxes[
+    Column[{
+      Row[{
+        Row[{
+          
+          Column[{"", "Initial Position: ", "Velocity: ", "Viewing Angle: "}, 
+           Right, Spacings -> 1.2], 
+          Column[{
+            RadioButtonBar[
+             Dynamic[$CellContext`persistentWormhole$$], {
+             True -> "Permanent Wormhole", False -> "Temporary Wormhole"}, 
+             Appearance -> "Vertical"], 
+            Row[{
+              Slider[
+               Dynamic[$CellContext`l$$], {
+                Dynamic[0.01], 2}], 
+              Dynamic[
+               $CellContext`padNumber$$[$CellContext`l$$]]}], 
+            Row[{
+              Slider[
+               Dynamic[$CellContext`v$$], {0.01, 1}], 
+              Dynamic[
+               $CellContext`padNumber$$[$CellContext`v$$]]}], 
+            Row[{
+              Slider[
+               Dynamic[$CellContext`a$$], {-1, 1}], 
+              Dynamic[
+               $CellContext`padDegrees$$[$CellContext`a$$ 180]], 
+              "\[Degree]"}]}, Left, Spacings -> 1]}], 
+        Row[{"  "}], 
+        Row[{
+          Column[{"", "Wormhole Radius: ", 
+            If[
+             Not[$CellContext`persistentWormhole$$], "Activation Time: "], 
+            If[
+             Not[$CellContext`persistentWormhole$$], "Activation Duration: "]}
+           , Right, Spacings -> 1.2], 
+          Column[{
+            RadioButtonBar[
+             Dynamic[$CellContext`multipleHistories$$], {
+             False -> "Single History", True -> "Multiple Histories"}, 
+             Appearance -> "Vertical"], 
+            Row[{
+              Slider[
+               Dynamic[$CellContext`b$$], {0.1, 1}], 
+              Dynamic[
+               $CellContext`padNumber$$[$CellContext`b$$]]}], 
+            If[
+             Not[$CellContext`persistentWormhole$$], 
+             Row[{
+               Slider[
+                Dynamic[$CellContext`t0$$], {0, 2}], 
+               Dynamic[
+                $CellContext`padNumber$$[$CellContext`t0$$]]}]], 
+            If[
+             Not[$CellContext`persistentWormhole$$], 
+             Row[{
+               Slider[
+                Dynamic[$CellContext`tl$$], {0.2, 0.99}], 
+               Dynamic[
+                $CellContext`padNumber$$[$CellContext`tl$$]]}]]}, Left, 
+           Spacings -> 1]}]}], 
+      Row[{
+        $CellContext`graphics$$[1], 
+        If[$CellContext`multipleHistories$$, 
+         Apply[Sequence, {"          ", 
+           $CellContext`graphics$$[2]}]]}]}, Center], StandardForm],
+   ImageSizeCache->{820., {261.70743643933906`, 268.01256356066096`}}],
+  DynamicModuleValues:>{{DownValues[$CellContext`padNumber$$] = {HoldPattern[
+         $CellContext`padNumber$$[
+          Pattern[$CellContext`n, 
+           Blank[]]]] :> PaddedForm[
+         N[$CellContext`n], {3, 2}, NumberPadding -> {"", "0"}, 
+         NumberSigns -> {"-", "+"}]}}, {
+    DownValues[$CellContext`padDegrees$$] = {HoldPattern[
+         $CellContext`padDegrees$$[
+          Pattern[$CellContext`n, 
+           Blank[]]]] :> PaddedForm[
+         IntegerPart[
+          N[$CellContext`n]], {3, 0}, NumberPadding -> {" ", "0"}, 
+         NumberSigns -> {"-", "+"}]}}, {
+    DownValues[$CellContext`particleTemperature$$] = {HoldPattern[
+         $CellContext`particleTemperature$$[
+          Pattern[$CellContext`initialT, 
+           Blank[]], 
+          Pattern[$CellContext`t, 
+           Blank[]]]] :> 
+       N[($CellContext`t/(3 10^8) + 
+          1/$CellContext`initialT^0.5)^(-(1/0.5))]}}, {
+    DownValues[$CellContext`colourFunction1$$] = {HoldPattern[
+         $CellContext`colourFunction1$$[
+          Pattern[$CellContext`t$, 
+           Blank[]]]] :> Blend[{Blue, Yellow, Orange, Red}, 
+         Rescale[
+          $CellContext`particleTemperature$$[$CellContext`initialTemperature$$\
+, $CellContext`t$ - $CellContext`tmin$$], {
+           
+           Part[$CellContext`minimumTemperature$$, 
+            1], $CellContext`initialTemperature$$}]]}}, {
+    DownValues[$CellContext`colourFunction2$$] = {HoldPattern[
+         $CellContext`colourFunction2$$[
+          Pattern[$CellContext`t$, 
+           Blank[]]]] :> Blend[{Blue, Yellow, Orange, Red}, 
+         Rescale[
+          $CellContext`particleTemperature$$[
+           
+           Part[$CellContext`collisionTemperature$$, 
+            1], $CellContext`t$ - ($CellContext`l$$ - \
+$CellContext`v$$)/$CellContext`v$$ - $CellContext`tmin$$], {
+           
+           Part[$CellContext`minimumTemperature$$, 
+            1], $CellContext`initialTemperature$$}]]}}, {
+    DownValues[$CellContext`colourFunction3$$] = {HoldPattern[
+         $CellContext`colourFunction3$$[
+          Pattern[$CellContext`t$, 
+           Blank[]]]] :> Blend[{Blue, Yellow, Orange, Red}, 
+         Rescale[
+          $CellContext`particleTemperature$$[$CellContext`initialTemperature$$\
+, $CellContext`t$ - $CellContext`tmin$$ + $CellContext`l$$/$CellContext`v$$], {
+           
+           Part[$CellContext`minimumTemperature$$, 
+            1], $CellContext`initialTemperature$$}]]}}, {
+    DownValues[$CellContext`bump1$$] = {HoldPattern[
+         $CellContext`bump1$$[
+          Pattern[$CellContext`t$, 
+           Blank[]]]] :> 
+       Piecewise[{{
+          0.0001, Abs[$CellContext`tl$$^2 - ($CellContext`t$ - \
+$CellContext`t0$$)^2] < 0.01}, {$CellContext`b$$ 
+           Exp[1/$CellContext`tl$$^2 - 
+             1/($CellContext`tl$$^2 - ($CellContext`t$ - \
+$CellContext`t0$$)^2)], 
+           
+           And[$CellContext`t0$$ - $CellContext`tl$$ < $CellContext`t$, \
+$CellContext`t$ < $CellContext`t0$$ + $CellContext`tl$$]}, {
+          0.0001, True}}]}}, {DownValues[$CellContext`bump2$$] = {HoldPattern[
+         $CellContext`bump2$$[
+          Pattern[$CellContext`t$, 
+           Blank[]]]] :> $CellContext`bump1$$[$CellContext`t$ + 2]}}, {
+    DownValues[$CellContext`radial1$$] = {HoldPattern[
+         $CellContext`radial1$$[
+          Pattern[$CellContext`t$, 
+           Blank[]]]] :> Dynamic[
+         If[$CellContext`persistentWormhole$$, 
+          
+          Sqrt[$CellContext`b$$^2 + ($CellContext`l$$ - $CellContext`v$$ \
+$CellContext`t$)^2], 
+          
+          Sqrt[($CellContext`bump1$$[$CellContext`t$] + \
+$CellContext`bump2$$[$CellContext`t$])^2 + ($CellContext`l$$ - \
+$CellContext`v$$ $CellContext`t$)^2]]]}}, {
+    DownValues[$CellContext`radial2$$] = {HoldPattern[
+         $CellContext`radial2$$[
+          Pattern[$CellContext`t$, 
+           Blank[]]]] :> Dynamic[
+         If[$CellContext`persistentWormhole$$, 
+          
+          Sqrt[$CellContext`b$$^2 + ($CellContext`v$$ ($CellContext`t$ + 
+              2 - $CellContext`l$$/$CellContext`v$$))^2], 
+          
+          Sqrt[($CellContext`bump1$$[$CellContext`t$] + \
+$CellContext`bump2$$[$CellContext`t$])^2 + ($CellContext`v$$ ($CellContext`t$ + 
+              2 - $CellContext`l$$/$CellContext`v$$))^2]]]}}, {
+    DownValues[$CellContext`geodesicPlot$$] = {HoldPattern[
+         $CellContext`geodesicPlot$$[
+          Pattern[$CellContext`geodesic$, 
+           Blank[]], 
+          Pattern[$CellContext`phiOffset$, 
+           Blank[]], 
+          Pattern[$CellContext`t1$, 
+           Blank[]], 
+          Pattern[$CellContext`t2$, 
+           Blank[]], 
+          Pattern[$CellContext`colours$, 
+           Blank[]]]] :> Dynamic[
+         If[Part[$CellContext`t1$, 1] > $CellContext`tmax$$, {}, 
+          ParametricPlot3D[{Part[
+              $CellContext`geodesic$[$CellContext`t], 1] 
+            Cos[$CellContext`phiOffset$], Part[
+              $CellContext`geodesic$[$CellContext`t], 1] 
+            Sin[$CellContext`phiOffset$], $CellContext`t}, {$CellContext`t, 
+            Part[$CellContext`t1$, 1], 
+            Part[$CellContext`t2$, 1]}, 
+           ColorFunction -> $CellContext`colours$, ColorFunctionScaling -> 
+           False]]]}}, {DownValues[$CellContext`graphics$$] = {HoldPattern[
+         $CellContext`graphics$$[
+          Pattern[$CellContext`h$, 
+           Blank[]]]] :> Dynamic[
+         Deploy[
+          Pane[
+           ImageCrop[
+            Show[
+             Part[$CellContext`wormhole$$, 1], 
+             If[
+              Not[$CellContext`multipleHistories$$], 
+              Part[$CellContext`singleHistory$$, 1], 
+              Part[
+               Part[$CellContext`multipleHistory$$, 1], $CellContext`h$]], 
+             ImageSize -> {400, 400}, Axes -> False, Boxed -> False, 
+             ImagePadding -> None, 
+             PlotRange -> {{$CellContext`xmin$$, $CellContext`xmax$$}, \
+{$CellContext`ymin$$ - $CellContext`b$$, $CellContext`ymax$$ + \
+$CellContext`b$$}, {$CellContext`tmin$$, $CellContext`tmax$$}}, 
+             ViewPoint -> {1.3 Cos[
+                 Part[$CellContext`\[Phi]$$, 1]], (-2.4) Sin[
+                 Part[$CellContext`\[Phi]$$, 1]], 1}, 
+             ViewVertical -> {0, 0, 1}, ViewAngle -> 
+             Automatic]]]]]}}}]], "Output",
+ CellLabel->"Out[1]=",ExpressionUUID->"f2386d5b-ad65-4ba1-b38c-00dcdc048948"]
+}, {2}]],
+
+Cell[TextData[{
+ "The ",
+ StyleBox["permanent wormhole",
+  FontWeight->"Bold"],
+ " is represented by a green cylinder. Shown is a slice of the Morris-Thorne \
+traversable wormhole spacetime with time ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a8bb03d1-ba78-41fd-a4f1-f54095603c20"],
+ " as the vertical axis, the radial coordinate ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["r", "TI"], "\[Element]", 
+         RowBox[{"[", 
+           RowBox[{
+             SubscriptBox[
+              StyleBox["b", "TI"], "0"], ",", "\[Infinity]"}], ")"}]}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "r\\in\\left[b_{0},\\infty\\right)", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9fbb1cd4-6977-4668-aac5-67480cb133f7"],
+ " orthogonal to the ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "01d65c10-2229-4c22-bc3e-3761585f1b48"],
+ " axis, and the azimuthal angle ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[Phi]", TraditionalForm], "errors" -> {}, "input" -> 
+     "\\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "1cf3da5f-4cde-4707-be1a-1e830814083f"],
+ " going around the ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "78a02d9a-d0d7-4623-9676-f11a5d6e1928"],
+ " axis. The polar angle ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[Theta]", TraditionalForm], "errors" -> {}, "input" -> 
+     "\\theta", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "62486475-ac84-459b-83e0-2103ed891aa7"],
+ " is suppressed, such that ",
+ StyleBox["each circle in the cylinder represents a sphere",
+  FontWeight->"Bold"],
+ " at a particular instance in time.",
+ " Note that in the Morris-Thorne spacetime, the region ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["r", "TI"], "\[Element]", 
+         RowBox[{"[", 
+           RowBox[{"0", ",", 
+             SubscriptBox[
+              StyleBox["b", "TI"], "0"]}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "r\\in\\left[0,b_{0}\\right)", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "8d9dcedc-2c57-4b22-9487-ab20112dc0f5"],
+ " \[Dash] the interior of the cylinder in the plot \[Dash] is inaccessible."
+}], "Text",ExpressionUUID->"f70079e3-85be-4b5b-ab25-849069d50bb9"],
+
+Cell["\<\
+The incoming and outgoing paths of the object are calculated using the \
+geodesic equations. The colors along the paths indicate temperature, with red \
+being the hottest. The object starts at the red temperature and approaches \
+the wormhole. Upon traversal, the object exits the wormhole in the past, in \
+the opposite spatial direction, and then collides with its past self.\
+\>", "Text",ExpressionUUID->"a8ebbc6f-f1be-4f82-a36e-48c6868c5c78"],
+
+Cell[TextData[{
+ "With a ",
+ StyleBox["single history",
+  FontWeight->"Bold"],
+ ", a paradox will always arise. This is indicated by the fact that some of \
+the path is colored gray, which means there is no consistent choice of \
+temperature along the path, hence there is a consistency paradox. By \
+switching to ",
+ StyleBox["multiple histories",
+  FontWeight->"Bold"],
+ ", we resolve the paradox. Two histories will be shown on the screen, with \
+the first history on the left and the second (new) history on the right. The \
+gray lines will disappear, and there will be a fully consistent temperature \
+evolution along the paths, thus we have resolved the paradox."
+}], "Text",ExpressionUUID->"0277e679-5c84-431d-b356-7822248587d1"],
+
+Cell[TextData[{
+ "The",
+ StyleBox[" temporary wormhole",
+  FontWeight->"Bold"],
+ " is represented by the two yellow \[OpenCurlyDoubleQuote]bumps\
+\[CloseCurlyDoubleQuote], which can be thought of as slices of the green \
+cylinder representing the permanent wormhole. The coordinate system is the \
+same, with the polar angle ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[Theta]", TraditionalForm], "errors" -> {}, "input" -> 
+     "\\theta", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "55159067-306e-4508-a09a-7d82f690b191"],
+ " suppressed, except that now the radial coordinate ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       StyleBox["r", "TI"], TraditionalForm], "errors" -> {}, "input" -> "r", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "371b7cc0-95c9-4664-a7a8-7f28dda33da4"],
+ " has a time-dependent range ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["r", "TI"], 
+         RowBox[{"(", 
+           StyleBox["t", "TI"], ")"}], "\[Element]", 
+         RowBox[{"[", 
+           RowBox[{
+             StyleBox["b", "TI"], 
+             RowBox[{"(", 
+               StyleBox["t", "TI"], ")"}], ",", "\[Infinity]"}], ")"}]}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "r\\left(t\\right)\\in\\left[b\\left(t\\right),\\infty\\right)", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "91fc0f3c-7f9e-4350-9eb5-828efcc5ffaa"],
+ ". The region ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["r", "TI"], 
+         RowBox[{"(", 
+           StyleBox["t", "TI"], ")"}], "\[Element]", 
+         RowBox[{"[", 
+           RowBox[{"0", ",", 
+             StyleBox["b", "TI"], 
+             RowBox[{"(", 
+               StyleBox["t", "TI"], ")"}]}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "r\\left(t\\right)\\in\\left[0,b\\left(t\\right)\\right)", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a95b6358-b52c-4880-980d-f6cd34410b69"],
+ " \[Dash] the interior of the two \[OpenCurlyDoubleQuote]bumps\
+\[CloseCurlyDoubleQuote] \[Dash] is inaccessible."
+}], "Text",ExpressionUUID->"b45bb24a-527a-41e7-8b2f-89dcc206c588"],
+
+Cell["\<\
+For more information, please see our paper \[OpenCurlyDoubleQuote]Wormhole \
+Time Machines and Multiple Histories\[CloseCurlyDoubleQuote].\
+\>", "Subsubsection",ExpressionUUID->"a705a562-dd84-4f3f-b106-4395ffe9d678"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1032., 796.1999999999999},
+WindowMargins->{{Automatic, -5.400000000000091}, {Automatic, 0}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
+TaggingRules->Association["TryRealOnly" -> False],
+TrackCellChangeTimes->False,
+SpellingDictionaries->{"CorrectWords"->{
+ "covectors", "covector", "Kretschmann", "Barak", "Shoshany", "Friedmann", 
+  "baraksh", "\[Nu]\[Sigma]", "Niayesh", "Afshordi", "\[Mu]\[Lambda]", 
+  "\[Lambda]\[Nu]", "vierbeins", "Alcubierre", "doi", "zenodo", 
+  "a\[CloseCurlyQuote]", "url", "Wogan"}},
+Magnification:>1.1 Inherited,
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f837ad59-24cb-42bc-9d70-eb28feb8ac62"
+]
+
