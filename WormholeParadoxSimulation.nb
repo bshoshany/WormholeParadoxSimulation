@@ -1,3 +1,22 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     57862,       1404]
+NotebookOptionsPosition[     55242,       1354]
+NotebookOutlinePosition[     56061,       1378]
+CellTagsIndexPosition[     56018,       1375]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
@@ -473,8 +492,8 @@ Cell[BoxData[
               RowBox[{"radial1", ",", "\[Pi]", ",", 
                RowBox[{"Dynamic", "[", 
                 FractionBox["l", "v"], "]"}], ",", 
-               RowBox[{"Dynamic", "[", "tmax", "]"}], ",", 
-               "colourFunction1"}], "]"}], "\[LeftDoubleBracket]", "1", 
+               RowBox[{"Dynamic", "[", "tmax", "]"}], ",", "colourFunction1"}]
+               , "]"}], "\[LeftDoubleBracket]", "1", 
              "\[RightDoubleBracket]"}], ",", 
             RowBox[{"{", "}"}]}], "]"}]}], "}"}]}], "]"}], "]"}]}], ";", 
     RowBox[{"multipleHistory", "=", 
@@ -983,8 +1002,8 @@ $CellContext`colourFunction1$$], 1],
             If[
              Not[$CellContext`persistentWormhole$$], "Activation Time: "], 
             If[
-             Not[$CellContext`persistentWormhole$$], "Activation Duration: "]}
-           , Right, Spacings -> 1.2], 
+             Not[$CellContext`persistentWormhole$$], 
+             "Activation Duration: "]}, Right, Spacings -> 1.2], 
           Column[{
             RadioButtonBar[
              Dynamic[$CellContext`multipleHistories$$], {
@@ -1015,7 +1034,7 @@ $CellContext`colourFunction1$$], 1],
         If[$CellContext`multipleHistories$$, 
          Apply[Sequence, {"          ", 
            $CellContext`graphics$$[2]}]]}]}, Center], StandardForm],
-   ImageSizeCache->{820., {261.70743643933906`, 268.01256356066096`}}],
+   ImageSizeCache->{820., {263.20743643933906`, 269.51256356066096`}}],
   DynamicModuleValues:>{{DownValues[$CellContext`padNumber$$] = {HoldPattern[
          $CellContext`padNumber$$[
           Pattern[$CellContext`n, 
@@ -1167,15 +1186,15 @@ Cell[TextData[{
 traversable wormhole spacetime with time ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association["boxes" -> FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
        StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
-     "state" -> "Boxes"],
+     "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "a8bb03d1-ba78-41fd-a4f1-f54095603c20"],
  " as the vertical axis, the radial coordinate ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association["boxes" -> FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
        RowBox[{
          StyleBox["r", "TI"], "\[Element]", 
          RowBox[{"[", 
@@ -1183,39 +1202,39 @@ traversable wormhole spacetime with time ",
              SubscriptBox[
               StyleBox["b", "TI"], "0"], ",", "\[Infinity]"}], ")"}]}], 
        TraditionalForm], "errors" -> {}, "input" -> 
-     "r\\in\\left[b_{0},\\infty\\right)", "state" -> "Boxes"],
+     "r\\in\\left[b_{0},\\infty\\right)", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "9fbb1cd4-6977-4668-aac5-67480cb133f7"],
  " orthogonal to the ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association["boxes" -> FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
        StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
-     "state" -> "Boxes"],
+     "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "01d65c10-2229-4c22-bc3e-3761585f1b48"],
  " axis, and the azimuthal angle ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association[
+   TemplateBox[<|
     "boxes" -> FormBox["\[Phi]", TraditionalForm], "errors" -> {}, "input" -> 
-     "\\phi", "state" -> "Boxes"],
+     "\\phi", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "1cf3da5f-4cde-4707-be1a-1e830814083f"],
  " going around the ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association["boxes" -> FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
        StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
-     "state" -> "Boxes"],
+     "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "78a02d9a-d0d7-4623-9676-f11a5d6e1928"],
  " axis. The polar angle ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association[
+   TemplateBox[<|
     "boxes" -> FormBox["\[Theta]", TraditionalForm], "errors" -> {}, "input" -> 
-     "\\theta", "state" -> "Boxes"],
+     "\\theta", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "62486475-ac84-459b-83e0-2103ed891aa7"],
  " is suppressed, such that ",
@@ -1225,7 +1244,7 @@ traversable wormhole spacetime with time ",
  " Note that in the Morris-Thorne spacetime, the region ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association["boxes" -> FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
        RowBox[{
          StyleBox["r", "TI"], "\[Element]", 
          RowBox[{"[", 
@@ -1233,7 +1252,7 @@ traversable wormhole spacetime with time ",
              SubscriptBox[
               StyleBox["b", "TI"], "0"]}], ")"}]}], TraditionalForm], 
      "errors" -> {}, "input" -> "r\\in\\left[0,b_{0}\\right)", "state" -> 
-     "Boxes"],
+     "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "8d9dcedc-2c57-4b22-9487-ab20112dc0f5"],
  " \[Dash] the interior of the cylinder in the plot \[Dash] is inaccessible."
@@ -1273,23 +1292,23 @@ cylinder representing the permanent wormhole. The coordinate system is the \
 same, with the polar angle ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association[
+   TemplateBox[<|
     "boxes" -> FormBox["\[Theta]", TraditionalForm], "errors" -> {}, "input" -> 
-     "\\theta", "state" -> "Boxes"],
+     "\\theta", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "55159067-306e-4508-a09a-7d82f690b191"],
  " suppressed, except that now the radial coordinate ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association["boxes" -> FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
        StyleBox["r", "TI"], TraditionalForm], "errors" -> {}, "input" -> "r", 
-     "state" -> "Boxes"],
+     "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "371b7cc0-95c9-4664-a7a8-7f28dda33da4"],
  " has a time-dependent range ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association["boxes" -> FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
        RowBox[{
          StyleBox["r", "TI"], 
          RowBox[{"(", 
@@ -1301,13 +1320,13 @@ same, with the polar angle ",
                StyleBox["t", "TI"], ")"}], ",", "\[Infinity]"}], ")"}]}], 
        TraditionalForm], "errors" -> {}, "input" -> 
      "r\\left(t\\right)\\in\\left[b\\left(t\\right),\\infty\\right)", "state" -> 
-     "Boxes"],
+     "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "91fc0f3c-7f9e-4350-9eb5-828efcc5ffaa"],
  ". The region ",
  Cell[BoxData[
   FormBox[
-   TemplateBox[Association["boxes" -> FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
        RowBox[{
          StyleBox["r", "TI"], 
          RowBox[{"(", 
@@ -1319,7 +1338,7 @@ same, with the polar angle ",
                StyleBox["t", "TI"], ")"}]}], ")"}]}], TraditionalForm], 
      "errors" -> {}, "input" -> 
      "r\\left(t\\right)\\in\\left[0,b\\left(t\\right)\\right)", "state" -> 
-     "Boxes"],
+     "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
   "a95b6358-b52c-4880-980d-f6cd34410b69"],
  " \[Dash] the interior of the two \[OpenCurlyDoubleQuote]bumps\
@@ -1333,10 +1352,9 @@ Time Machines and Multiple Histories\[CloseCurlyDoubleQuote].\
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1032., 796.1999999999999},
-WindowMargins->{{Automatic, -5.400000000000091}, {Automatic, 0}},
-PrivateNotebookOptions->{"FileOutlineCache"->False},
-TaggingRules->Association["TryRealOnly" -> False],
+WindowSize->{1024.8, 797.4},
+WindowMargins->{{Automatic, -5.399999999999636}, {Automatic, -0.6}},
+TaggingRules-><|"TryRealOnly" -> False|>,
 TrackCellChangeTimes->False,
 SpellingDictionaries->{"CorrectWords"->{
  "covectors", "covector", "Kretschmann", "Barak", "Shoshany", "Friedmann", 
@@ -1344,8 +1362,53 @@ SpellingDictionaries->{"CorrectWords"->{
   "\[Lambda]\[Nu]", "vierbeins", "Alcubierre", "doi", "zenodo", 
   "a\[CloseCurlyQuote]", "url", "Wogan"}},
 Magnification:>1.1 Inherited,
-FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"f837ad59-24cb-42bc-9d70-eb28feb8ac62"
 ]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 141, 1, 174, "Title",ExpressionUUID->"a4788cf1-87df-4bd4-8a44-6c4f0f5d5deb"],
+Cell[CellGroupData[{
+Cell[746, 27, 127, 2, 61, "Chapter",ExpressionUUID->"1620339a-f419-4d46-b64f-7ee6cd92674a"],
+Cell[876, 31, 263, 5, 38, "Text",ExpressionUUID->"fc84967c-73f9-4c07-9fb9-219d9bf32db4"],
+Cell[1142, 38, 115, 1, 38, "Text",ExpressionUUID->"95b294a6-409d-47c3-8538-4733dd316213"],
+Cell[1260, 41, 132, 1, 38, "Text",ExpressionUUID->"4839b35f-33c0-48ed-ba86-599c87356e87"],
+Cell[1395, 44, 123, 1, 38, "Text",ExpressionUUID->"6fff098c-ebf4-4de1-b348-8c0cd6e29f32"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1555, 50, 124, 2, 61, "Chapter",ExpressionUUID->"2ca096c1-a860-4af7-b578-d43846b82a40"],
+Cell[1682, 54, 254, 5, 38, "Text",ExpressionUUID->"53f59712-afd1-4fa9-87e8-6981a33fbc5b"],
+Cell[1939, 61, 116, 1, 38, "Text",ExpressionUUID->"9ffd9ecd-e9b3-4211-a0ef-62b6d4bdc1f3"],
+Cell[2058, 64, 132, 1, 38, "Text",ExpressionUUID->"e9724c29-dc92-40c7-85de-fd3c990f1e82"],
+Cell[2193, 67, 124, 1, 38, "Text",ExpressionUUID->"08c0c19b-f267-42c4-88a0-d3a5c30b16af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2354, 73, 242, 3, 53, "Chapter",ExpressionUUID->"7eac218f-32f8-4f80-803a-5f68f3a48d0d"],
+Cell[CellGroupData[{
+Cell[2621, 80, 30301, 755, 77, "Input",ExpressionUUID->"53646834-a886-428b-b54e-5ea50c3c12ea"],
+Cell[32925, 837, 15403, 340, 553, "Output",ExpressionUUID->"f2386d5b-ad65-4ba1-b38c-00dcdc048948"]
+}, {2}]],
+Cell[48340, 1180, 3049, 78, 77, "Text",ExpressionUUID->"f70079e3-85be-4b5b-ab25-849069d50bb9"],
+Cell[51392, 1260, 456, 6, 77, "Text",ExpressionUUID->"a8ebbc6f-f1be-4f82-a36e-48c6868c5c78"],
+Cell[51851, 1268, 736, 14, 77, "Text",ExpressionUUID->"0277e679-5c84-431d-b356-7822248587d1"],
+Cell[52590, 1284, 2395, 61, 77, "Text",ExpressionUUID->"b45bb24a-527a-41e7-8b2f-89dcc206c588"],
+Cell[54988, 1347, 226, 3, 77, "Subsubsection",ExpressionUUID->"a705a562-dd84-4f3f-b106-4395ffe9d678"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
 
