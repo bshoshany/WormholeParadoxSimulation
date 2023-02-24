@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     57862,       1404]
-NotebookOptionsPosition[     55242,       1354]
-NotebookOutlinePosition[     56061,       1378]
-CellTagsIndexPosition[     56018,       1375]
+NotebookDataLength[     56813,       1376]
+NotebookOptionsPosition[     54244,       1331]
+NotebookOutlinePosition[     54675,       1348]
+CellTagsIndexPosition[     54632,       1345]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,60 +21,71 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Wormhole Time Machines and Multiple Histories", "Title",
- TextAlignment->Center,ExpressionUUID->"a4788cf1-87df-4bd4-8a44-6c4f0f5d5deb"],
+ TextAlignment->Center,ExpressionUUID->"128c8a38-260f-4a0b-bee1-61dd7f591347"],
 
 Cell[CellGroupData[{
 
 Cell["Barak Shoshany", "Chapter",
  TextAlignment->Center,
- FontSize->24,ExpressionUUID->"1620339a-f419-4d46-b64f-7ee6cd92674a"],
+ FontSize->24,ExpressionUUID->"b5fedb32-5b86-4e0f-89fe-39dfc90f809e"],
 
 Cell[TextData[ButtonBox["bshoshany@brocku.ca",
  BaseStyle->"Hyperlink",
  ButtonData->{
    URL["mailto:bshoshany@brocku.ca"], None},
  ButtonNote->"mailto:bshoshany@brocku.ca"]], "Text",
- TextAlignment->Center,ExpressionUUID->"fc84967c-73f9-4c07-9fb9-219d9bf32db4"],
+ TextAlignment->Center,ExpressionUUID->"1eedf2d6-82ab-4a78-b665-ece06c2d6eb5"],
 
 Cell["https://baraksh.com/", "Text",
- TextAlignment->Center,ExpressionUUID->"95b294a6-409d-47c3-8538-4733dd316213"],
+ TextAlignment->Center,ExpressionUUID->"0f3fefd7-1097-4235-b05f-66649dbe2102"],
 
 Cell["https://orcid.org/0000-0003-2222-127X", "Text",
- TextAlignment->Center,ExpressionUUID->"4839b35f-33c0-48ed-ba86-599c87356e87"],
+ TextAlignment->Center,ExpressionUUID->"ee2eb3ff-67cb-4a5e-997e-4c3308a3e731"],
 
 Cell["https://github.com/bshoshany", "Text",
- TextAlignment->Center,ExpressionUUID->"6fff098c-ebf4-4de1-b348-8c0cd6e29f32"]
+ TextAlignment->Center,ExpressionUUID->"983c837d-ef43-44b9-9655-a75bd8a9fa08"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["Jared Wogan", "Chapter",
  TextAlignment->Center,
- FontSize->24,ExpressionUUID->"2ca096c1-a860-4af7-b578-d43846b82a40"],
+ FontSize->24,ExpressionUUID->"2fbcbe8b-25e2-4792-865e-42e11a0fee5b"],
 
-Cell[TextData[ButtonBox["jw17yv@brocku.ca",
+Cell[TextData[ButtonBox["jared.wogan@gmail.com",
  BaseStyle->"Hyperlink",
  ButtonData->{
-   URL["mailto:jw17yv@brocku.ca"], None},
- ButtonNote->"mailto:jw17yv@brocku.ca"]], "Text",
- TextAlignment->Center,ExpressionUUID->"53f59712-afd1-4fa9-87e8-6981a33fbc5b"],
+   URL["mailto:jared.wogan@gmail.com"], None},
+ ButtonNote->"mailto:jared.wogan@gmail.com"]], "Text",
+ TextAlignment->Center,ExpressionUUID->"97abd20c-4a3c-4e3a-be9f-16fabdf6f02d"],
 
-Cell["https://jaredwogan.ca", "Text",
- TextAlignment->Center,ExpressionUUID->"9ffd9ecd-e9b3-4211-a0ef-62b6d4bdc1f3"],
+Cell["https://jaredwogan.ca/", "Text",
+ TextAlignment->Center,ExpressionUUID->"f0f80c1b-b452-4de7-8181-92a290cdf885"],
 
 Cell["https://orcid.org/0000-0002-0737-5492", "Text",
- TextAlignment->Center,ExpressionUUID->"e9724c29-dc92-40c7-85de-fd3c990f1e82"],
+ TextAlignment->Center,ExpressionUUID->"153119a9-d132-4123-8f69-85801a69dc0d"],
 
 Cell["https://github.com/JaredWogan", "Text",
- TextAlignment->Center,ExpressionUUID->"08c0c19b-f267-42c4-88a0-d3a5c30b16af"]
-}, Open  ]],
-
-Cell[CellGroupData[{
+ TextAlignment->Center,ExpressionUUID->"e9305b93-be80-4b6c-a1df-1c431e3a03db"],
 
 Cell[TextData[StyleBox["Department of Physics, Brock University, 1812 Sir \
 Isaac Brock Way, St. Catharines, Ontario, L2S 3A1, Canada",
- FontSize->18]], "Chapter",
- TextAlignment->Center,ExpressionUUID->"7eac218f-32f8-4f80-803a-5f68f3a48d0d"],
+ FontSize->14]], "Text",
+ TextAlignment->Center,ExpressionUUID->"b03cb2e9-03d8-487e-83e0-7e23f62de090"],
+
+Cell[TextData[{
+ StyleBox["For more information, please see our paper ",
+  FontSize->18],
+ StyleBox[ButtonBox["\"Wormhole Time Machines and Multiple Histories\"",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://arxiv.org/abs/2110.02448"], None},
+  ButtonNote->"https://arxiv.org/abs/2110.02448"],
+  FontSize->18],
+ StyleBox[".",
+  FontSize->18]
+}], "Text",
+ TextAlignment->Center,ExpressionUUID->"5c7de40a-f19e-4389-8010-06181f49f26e"],
 
 Cell[CellGroupData[{
 
@@ -685,26 +696,13 @@ Cell[BoxData[
                 RowBox[{
                  RowBox[{"{", 
                   RowBox[{
-                  "\"\<\>\"", ",", "\"\<Initial Position: \>\"", ",", 
-                   "\"\<Velocity: \>\"", ",", "\"\<Viewing Angle: \>\""}], 
-                  "}"}], ",", "Right", ",", 
+                  "\"\<Initial Position: \>\"", ",", "\"\<Velocity: \>\"", 
+                   ",", "\"\<Viewing Angle: \>\""}], "}"}], ",", "Right", ",", 
                  RowBox[{"Spacings", "\[Rule]", "1.2"}]}], "]"}], ",", 
                RowBox[{"Column", "[", 
                 RowBox[{
                  RowBox[{"{", 
                   RowBox[{
-                   RowBox[{"RadioButtonBar", "[", 
-                    RowBox[{
-                    RowBox[{"Dynamic", "[", "persistentWormhole", "]"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"True", "\[Rule]", "\"\<Permanent Wormhole\>\""}],
-                     ",", 
-                    RowBox[{
-                    "False", "\[Rule]", "\"\<Temporary Wormhole\>\""}]}], 
-                    "}"}], ",", 
-                    RowBox[{"Appearance", "\[Rule]", "\"\<Vertical\>\""}]}], 
-                    "]"}], ",", 
                    RowBox[{"Row", "[", 
                     RowBox[{"{", 
                     RowBox[{
@@ -833,7 +831,7 @@ Cell[BoxData[
                  RowBox[{"graphics", "[", "2", "]"}]}], "}"}]}]}], "]"}]}], 
            "}"}], "]"}]}], "}"}], ",", "Center"}], "]"}], "]"}]}]}], 
   "]"}]], "Input",
- CellLabel->"In[1]:=",ExpressionUUID->"53646834-a886-428b-b54e-5ea50c3c12ea"],
+ CellLabel->"In[1]:=",ExpressionUUID->"aa53ef7f-35ca-4091-98e1-7bfb54074807"],
 
 Cell[BoxData[
  DynamicModuleBox[{$CellContext`padNumber$$, $CellContext`padDegrees$$, \
@@ -972,13 +970,9 @@ $CellContext`colourFunction1$$], 1],
       Row[{
         Row[{
           
-          Column[{"", "Initial Position: ", "Velocity: ", "Viewing Angle: "}, 
+          Column[{"Initial Position: ", "Velocity: ", "Viewing Angle: "}, 
            Right, Spacings -> 1.2], 
           Column[{
-            RadioButtonBar[
-             Dynamic[$CellContext`persistentWormhole$$], {
-             True -> "Permanent Wormhole", False -> "Temporary Wormhole"}, 
-             Appearance -> "Vertical"], 
             Row[{
               Slider[
                Dynamic[$CellContext`l$$], {
@@ -1034,7 +1028,7 @@ $CellContext`colourFunction1$$], 1],
         If[$CellContext`multipleHistories$$, 
          Apply[Sequence, {"          ", 
            $CellContext`graphics$$[2]}]]}]}, Center], StandardForm],
-   ImageSizeCache->{820., {263.20743643933906`, 269.51256356066096`}}],
+   ImageSizeCache->{747., {234.734033203125, 240.465966796875}}],
   DynamicModuleValues:>{{DownValues[$CellContext`padNumber$$] = {HoldPattern[
          $CellContext`padNumber$$[
           Pattern[$CellContext`n, 
@@ -1175,22 +1169,19 @@ $CellContext`b$$}, {$CellContext`tmin$$, $CellContext`tmax$$}},
                  Part[$CellContext`\[Phi]$$, 1]], 1}, 
              ViewVertical -> {0, 0, 1}, ViewAngle -> 
              Automatic]]]]]}}}]], "Output",
- CellLabel->"Out[1]=",ExpressionUUID->"f2386d5b-ad65-4ba1-b38c-00dcdc048948"]
+ CellLabel->"Out[1]=",ExpressionUUID->"9851d958-78ef-4a26-be6b-c6d5e0f4d386"]
 }, {2}]],
 
 Cell[TextData[{
- "The ",
- StyleBox["permanent wormhole",
-  FontWeight->"Bold"],
- " is represented by a green cylinder. Shown is a slice of the Morris-Thorne \
-traversable wormhole spacetime with time ",
+ "The wormhole is represented by a green cylinder. Shown is a slice of the \
+Morris-Thorne traversable wormhole spacetime with time ",
  Cell[BoxData[
   FormBox[
    TemplateBox[<|"boxes" -> FormBox[
        StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
      "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "a8bb03d1-ba78-41fd-a4f1-f54095603c20"],
+  "b8baa661-d8de-4eee-9732-c7b5a6cb01b8"],
  " as the vertical axis, the radial coordinate ",
  Cell[BoxData[
   FormBox[
@@ -1204,7 +1195,7 @@ traversable wormhole spacetime with time ",
        TraditionalForm], "errors" -> {}, "input" -> 
      "r\\in\\left[b_{0},\\infty\\right)", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "9fbb1cd4-6977-4668-aac5-67480cb133f7"],
+  "46e089e8-8955-4f1e-94aa-0686ee7c6228"],
  " orthogonal to the ",
  Cell[BoxData[
   FormBox[
@@ -1212,7 +1203,7 @@ traversable wormhole spacetime with time ",
        StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
      "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "01d65c10-2229-4c22-bc3e-3761585f1b48"],
+  "644e88f3-2a83-485f-8736-896ad62fc938"],
  " axis, and the azimuthal angle ",
  Cell[BoxData[
   FormBox[
@@ -1220,7 +1211,7 @@ traversable wormhole spacetime with time ",
     "boxes" -> FormBox["\[Phi]", TraditionalForm], "errors" -> {}, "input" -> 
      "\\phi", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "1cf3da5f-4cde-4707-be1a-1e830814083f"],
+  "87d61720-32f9-4c67-9b56-6ab3777ed128"],
  " going around the ",
  Cell[BoxData[
   FormBox[
@@ -1228,7 +1219,7 @@ traversable wormhole spacetime with time ",
        StyleBox["t", "TI"], TraditionalForm], "errors" -> {}, "input" -> "t", 
      "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "78a02d9a-d0d7-4623-9676-f11a5d6e1928"],
+  "a44d6999-e9b3-449a-af8b-29f951c682f2"],
  " axis. The polar angle ",
  Cell[BoxData[
   FormBox[
@@ -1236,12 +1227,12 @@ traversable wormhole spacetime with time ",
     "boxes" -> FormBox["\[Theta]", TraditionalForm], "errors" -> {}, "input" -> 
      "\\theta", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "62486475-ac84-459b-83e0-2103ed891aa7"],
+  "d43686dc-c078-45d4-baa1-f4ec7a2af858"],
  " is suppressed, such that ",
  StyleBox["each circle in the cylinder represents a sphere",
   FontWeight->"Bold"],
- " at a particular instance in time.",
- " Note that in the Morris-Thorne spacetime, the region ",
+ " at a particular instance in time. Note that in the Morris-Thorne \
+spacetime, the region ",
  Cell[BoxData[
   FormBox[
    TemplateBox[<|"boxes" -> FormBox[
@@ -1254,9 +1245,9 @@ traversable wormhole spacetime with time ",
      "errors" -> {}, "input" -> "r\\in\\left[0,b_{0}\\right)", "state" -> 
      "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "8d9dcedc-2c57-4b22-9487-ab20112dc0f5"],
+  "a966c11e-9548-4f3c-8650-154ab04644a8"],
  " \[Dash] the interior of the cylinder in the plot \[Dash] is inaccessible."
-}], "Text",ExpressionUUID->"f70079e3-85be-4b5b-ab25-849069d50bb9"],
+}], "Text",ExpressionUUID->"3a4272e0-42e0-4307-9aed-ffb40e6d346f"],
 
 Cell["\<\
 The incoming and outgoing paths of the object are calculated using the \
@@ -1264,7 +1255,7 @@ geodesic equations. The colors along the paths indicate temperature, with red \
 being the hottest. The object starts at the red temperature and approaches \
 the wormhole. Upon traversal, the object exits the wormhole in the past, in \
 the opposite spatial direction, and then collides with its past self.\
-\>", "Text",ExpressionUUID->"a8ebbc6f-f1be-4f82-a36e-48c6868c5c78"],
+\>", "Text",ExpressionUUID->"cf56bd8d-9659-4d57-aea4-92a2d97fe774"],
 
 Cell[TextData[{
  "With a ",
@@ -1280,91 +1271,70 @@ switching to ",
 the first history on the left and the second (new) history on the right. The \
 gray lines will disappear, and there will be a fully consistent temperature \
 evolution along the paths, thus we have resolved the paradox."
-}], "Text",ExpressionUUID->"0277e679-5c84-431d-b356-7822248587d1"],
+}], "Text",ExpressionUUID->"74cd1ec7-149b-47e9-b5a4-91993f02053b"],
 
 Cell[TextData[{
- "The",
- StyleBox[" temporary wormhole",
-  FontWeight->"Bold"],
- " is represented by the two yellow \[OpenCurlyDoubleQuote]bumps\
-\[CloseCurlyDoubleQuote], which can be thought of as slices of the green \
-cylinder representing the permanent wormhole. The coordinate system is the \
-same, with the polar angle ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|
-    "boxes" -> FormBox["\[Theta]", TraditionalForm], "errors" -> {}, "input" -> 
-     "\\theta", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "55159067-306e-4508-a09a-7d82f690b191"],
- " suppressed, except that now the radial coordinate ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       StyleBox["r", "TI"], TraditionalForm], "errors" -> {}, "input" -> "r", 
-     "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "371b7cc0-95c9-4664-a7a8-7f28dda33da4"],
- " has a time-dependent range ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         StyleBox["r", "TI"], 
-         RowBox[{"(", 
-           StyleBox["t", "TI"], ")"}], "\[Element]", 
-         RowBox[{"[", 
-           RowBox[{
-             StyleBox["b", "TI"], 
-             RowBox[{"(", 
-               StyleBox["t", "TI"], ")"}], ",", "\[Infinity]"}], ")"}]}], 
-       TraditionalForm], "errors" -> {}, "input" -> 
-     "r\\left(t\\right)\\in\\left[b\\left(t\\right),\\infty\\right)", "state" -> 
-     "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "91fc0f3c-7f9e-4350-9eb5-828efcc5ffaa"],
- ". The region ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         StyleBox["r", "TI"], 
-         RowBox[{"(", 
-           StyleBox["t", "TI"], ")"}], "\[Element]", 
-         RowBox[{"[", 
-           RowBox[{"0", ",", 
-             StyleBox["b", "TI"], 
-             RowBox[{"(", 
-               StyleBox["t", "TI"], ")"}]}], ")"}]}], TraditionalForm], 
-     "errors" -> {}, "input" -> 
-     "r\\left(t\\right)\\in\\left[0,b\\left(t\\right)\\right)", "state" -> 
-     "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "a95b6358-b52c-4880-980d-f6cd34410b69"],
- " \[Dash] the interior of the two \[OpenCurlyDoubleQuote]bumps\
-\[CloseCurlyDoubleQuote] \[Dash] is inaccessible."
-}], "Text",ExpressionUUID->"b45bb24a-527a-41e7-8b2f-89dcc206c588"],
+ "Copyright (c) 2023 Barak Shoshany and Jared Wogan. Licensed under the MIT \
+license; please see the file ",
+ StyleBox["LICENSE.txt", "Input"],
+ " in the ",
+ ButtonBox["GitHub repository",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/bshoshany/WormholeParadoxSimulation"], None},
+  ButtonNote->"https://github.com/bshoshany/WormholeParadoxSimulation"],
+ " for more information."
+}], "Text",ExpressionUUID->"41c5156a-917a-4f15-9be5-49f1e9e1573a"],
+
+Cell["Please cite this work as follows:", "Text",ExpressionUUID->"32026af9-3b5e-427a-a8cd-c0d2bd0b99d0"],
+
+Cell[TextData[{
+ "Barak Shoshany and Jared Wogan, \[OpenCurlyDoubleQuote]Wormhole Time \
+Machines and Multiple Histories\[CloseCurlyDoubleQuote], ",
+ ButtonBox["Gen. Relativ. Gravit. 55, 44 (2023)",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://link.springer.com/article/10.1007/s10714-023-03094-8"], None},
+  ButtonNote->"https://link.springer.com/article/10.1007/s10714-023-03094-8"],
+ ", ",
+ ButtonBox["doi:10.1007/s10714-023-03094-8",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://doi.org/10.1007/s10714-023-03094-8"], None},
+  ButtonNote->"https://doi.org/10.1007/s10714-023-03094-8"],
+ ", ",
+ ButtonBox["arXiv:2110.02448",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://arxiv.org/abs/2110.02448"], None},
+  ButtonNote->"https://arxiv.org/abs/2110.02448"],
+ " (February 2023)"
+}], "Item",ExpressionUUID->"37babc3c-a6ba-4770-a12f-8f70f68483f8"],
+
+Cell["You can also use the following BibTeX entry:", "Text",ExpressionUUID->"ddd0e633-4724-4d52-a786-dd91f877c626"],
 
 Cell["\<\
-For more information, please see our paper \[OpenCurlyDoubleQuote]Wormhole \
-Time Machines and Multiple Histories\[CloseCurlyDoubleQuote].\
-\>", "Subsubsection",ExpressionUUID->"a705a562-dd84-4f3f-b106-4395ffe9d678"]
+@article{Shoshany_Wogan_2021,
+    archiveprefix = {arXiv},
+    author        = {Barak Shoshany and Jared Wogan},
+    doi           = {10.1007/s10714-023-03094-8},
+    eprint        = {2110.02448},
+    journal       = {Gen. Relativ. Gravit.},
+    number        = {44},
+    title         = {{Wormhole Time Machines and Multiple Histories}},
+    volume        = {55},
+    year          = {2023}
+}\
+\>", "Program",ExpressionUUID->"c88abe10-8de6-4881-ad91-5b72da34c22d"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1024.8, 797.4},
-WindowMargins->{{Automatic, -5.399999999999636}, {Automatic, -0.6}},
-TaggingRules-><|"TryRealOnly" -> False|>,
+WindowSize->{961, 1043},
+WindowMargins->{{-6, Automatic}, {Automatic, -1}},
 TrackCellChangeTimes->False,
-SpellingDictionaries->{"CorrectWords"->{
- "covectors", "covector", "Kretschmann", "Barak", "Shoshany", "Friedmann", 
-  "baraksh", "\[Nu]\[Sigma]", "Niayesh", "Afshordi", "\[Mu]\[Lambda]", 
-  "\[Lambda]\[Nu]", "vierbeins", "Alcubierre", "doi", "zenodo", 
-  "a\[CloseCurlyQuote]", "url", "Wogan"}},
-Magnification:>1.1 Inherited,
-FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"f837ad59-24cb-42bc-9d70-eb28feb8ac62"
+ExpressionUUID->"6344bb1f-01e3-4f15-8782-86356f021f97"
 ]
 (* End of Notebook Content *)
 
@@ -1378,37 +1348,37 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 141, 1, 174, "Title",ExpressionUUID->"a4788cf1-87df-4bd4-8a44-6c4f0f5d5deb"],
+Cell[580, 22, 141, 1, 98, "Title",ExpressionUUID->"128c8a38-260f-4a0b-bee1-61dd7f591347"],
 Cell[CellGroupData[{
-Cell[746, 27, 127, 2, 61, "Chapter",ExpressionUUID->"1620339a-f419-4d46-b64f-7ee6cd92674a"],
-Cell[876, 31, 263, 5, 38, "Text",ExpressionUUID->"fc84967c-73f9-4c07-9fb9-219d9bf32db4"],
-Cell[1142, 38, 115, 1, 38, "Text",ExpressionUUID->"95b294a6-409d-47c3-8538-4733dd316213"],
-Cell[1260, 41, 132, 1, 38, "Text",ExpressionUUID->"4839b35f-33c0-48ed-ba86-599c87356e87"],
-Cell[1395, 44, 123, 1, 38, "Text",ExpressionUUID->"6fff098c-ebf4-4de1-b348-8c0cd6e29f32"]
+Cell[746, 27, 127, 2, 56, "Chapter",ExpressionUUID->"b5fedb32-5b86-4e0f-89fe-39dfc90f809e"],
+Cell[876, 31, 263, 5, 35, "Text",ExpressionUUID->"1eedf2d6-82ab-4a78-b665-ece06c2d6eb5"],
+Cell[1142, 38, 115, 1, 35, "Text",ExpressionUUID->"0f3fefd7-1097-4235-b05f-66649dbe2102"],
+Cell[1260, 41, 132, 1, 35, "Text",ExpressionUUID->"ee2eb3ff-67cb-4a5e-997e-4c3308a3e731"],
+Cell[1395, 44, 123, 1, 35, "Text",ExpressionUUID->"983c837d-ef43-44b9-9655-a75bd8a9fa08"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1555, 50, 124, 2, 61, "Chapter",ExpressionUUID->"2ca096c1-a860-4af7-b578-d43846b82a40"],
-Cell[1682, 54, 254, 5, 38, "Text",ExpressionUUID->"53f59712-afd1-4fa9-87e8-6981a33fbc5b"],
-Cell[1939, 61, 116, 1, 38, "Text",ExpressionUUID->"9ffd9ecd-e9b3-4211-a0ef-62b6d4bdc1f3"],
-Cell[2058, 64, 132, 1, 38, "Text",ExpressionUUID->"e9724c29-dc92-40c7-85de-fd3c990f1e82"],
-Cell[2193, 67, 124, 1, 38, "Text",ExpressionUUID->"08c0c19b-f267-42c4-88a0-d3a5c30b16af"]
-}, Open  ]],
+Cell[1555, 50, 124, 2, 56, "Chapter",ExpressionUUID->"2fbcbe8b-25e2-4792-865e-42e11a0fee5b"],
+Cell[1682, 54, 269, 5, 35, "Text",ExpressionUUID->"97abd20c-4a3c-4e3a-be9f-16fabdf6f02d"],
+Cell[1954, 61, 117, 1, 35, "Text",ExpressionUUID->"f0f80c1b-b452-4de7-8181-92a290cdf885"],
+Cell[2074, 64, 132, 1, 35, "Text",ExpressionUUID->"153119a9-d132-4123-8f69-85801a69dc0d"],
+Cell[2209, 67, 124, 1, 35, "Text",ExpressionUUID->"e9305b93-be80-4b6c-a1df-1c431e3a03db"],
+Cell[2336, 70, 239, 3, 33, "Text",ExpressionUUID->"b03cb2e9-03d8-487e-83e0-7e23f62de090"],
+Cell[2578, 75, 446, 12, 38, "Text",ExpressionUUID->"5c7de40a-f19e-4389-8010-06181f49f26e"],
 Cell[CellGroupData[{
-Cell[2354, 73, 242, 3, 53, "Chapter",ExpressionUUID->"7eac218f-32f8-4f80-803a-5f68f3a48d0d"],
-Cell[CellGroupData[{
-Cell[2621, 80, 30301, 755, 77, "Input",ExpressionUUID->"53646834-a886-428b-b54e-5ea50c3c12ea"],
-Cell[32925, 837, 15403, 340, 553, "Output",ExpressionUUID->"f2386d5b-ad65-4ba1-b38c-00dcdc048948"]
+Cell[3049, 91, 29689, 742, 1999, "Input",ExpressionUUID->"aa53ef7f-35ca-4091-98e1-7bfb54074807"],
+Cell[32741, 835, 15189, 336, 494, "Output",ExpressionUUID->"9851d958-78ef-4a26-be6b-c6d5e0f4d386"]
 }, {2}]],
-Cell[48340, 1180, 3049, 78, 77, "Text",ExpressionUUID->"f70079e3-85be-4b5b-ab25-849069d50bb9"],
-Cell[51392, 1260, 456, 6, 77, "Text",ExpressionUUID->"a8ebbc6f-f1be-4f82-a36e-48c6868c5c78"],
-Cell[51851, 1268, 736, 14, 77, "Text",ExpressionUUID->"0277e679-5c84-431d-b356-7822248587d1"],
-Cell[52590, 1284, 2395, 61, 77, "Text",ExpressionUUID->"b45bb24a-527a-41e7-8b2f-89dcc206c588"],
-Cell[54988, 1347, 226, 3, 77, "Subsubsection",ExpressionUUID->"a705a562-dd84-4f3f-b106-4395ffe9d678"]
+Cell[47942, 1174, 2994, 75, 110, "Text",ExpressionUUID->"3a4272e0-42e0-4307-9aed-ffb40e6d346f"],
+Cell[50939, 1251, 456, 6, 81, "Text",ExpressionUUID->"cf56bd8d-9659-4d57-aea4-92a2d97fe774"],
+Cell[51398, 1259, 736, 14, 127, "Text",ExpressionUUID->"74cd1ec7-149b-47e9-b5a4-91993f02053b"],
+Cell[52137, 1275, 487, 11, 58, "Text",ExpressionUUID->"41c5156a-917a-4f15-9be5-49f1e9e1573a"],
+Cell[52627, 1288, 104, 0, 35, "Text",ExpressionUUID->"32026af9-3b5e-427a-a8cd-c0d2bd0b99d0"],
+Cell[52734, 1290, 886, 21, 53, "Item",ExpressionUUID->"37babc3c-a6ba-4770-a12f-8f70f68483f8"],
+Cell[53623, 1313, 115, 0, 35, "Text",ExpressionUUID->"ddd0e633-4724-4d52-a786-dd91f877c626"],
+Cell[53741, 1315, 475, 12, 219, "Program",ExpressionUUID->"c88abe10-8de6-4881-ad91-5b72da34c22d"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

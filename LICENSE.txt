@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 Barak Shoshany and Jared Wogan
+Copyright (c) 2023 Barak Shoshany and Jared Wogan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
